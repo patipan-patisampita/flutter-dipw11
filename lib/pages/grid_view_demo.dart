@@ -9,6 +9,7 @@ class GridViewDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     int count=0;
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter Grid View"),
@@ -74,6 +75,22 @@ class GridViewDemo extends StatelessWidget {
                   title:'Gin Framework',
                   subTitle: 'Version 13.5',
                   icon:Icons.remove_done ,
+                ),
+              ),
+              Container(
+                child: Card(
+                  child: InkWell(
+                    splashColor: Colors.blue.withAlpha(30),
+                    onTap: () {
+                      count = count+1;
+                      debugPrint('${count}');
+                    },
+                    child: const SizedBox(
+                      width: 300,
+                      height: 100,
+                      child: Text('A card that can be tapped {count}'),
+                    ),
+                  ),
                 ),
               ),
             ],
