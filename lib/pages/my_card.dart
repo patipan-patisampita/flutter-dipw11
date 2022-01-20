@@ -15,6 +15,8 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Icon(icon, color: Colors.white),
         SizedBox(height: 6),

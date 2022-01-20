@@ -18,7 +18,7 @@ class GridViewDemo extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.fromLTRB(20, 50, 20, 50),
           child: GridView.count(
-            crossAxisCount: 2,
+            crossAxisCount: 3,
             mainAxisSpacing: 20,
             crossAxisSpacing: 20,
             children: [
@@ -41,15 +41,41 @@ class GridViewDemo extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: BoxDecoration(color: Colors.red),
                 padding: EdgeInsets.all(6.0),
-                child: Center(child: Text('3')),
-                color: Colors.red[100],
+                child: MyCard(
+                  title:'PHP/Laravel Framework',
+                  subTitle: 'Version 12.5',
+                  icon:Icons.home ,
+                ),
               ),
               Container(
+                decoration: BoxDecoration(color: Colors.red),
                 padding: EdgeInsets.all(6.0),
-                child: Center(child: Text('4')),
-                color: Colors.red[100],
-              )
+                child: MyCard(
+                  title:'Nest Framework',
+                  subTitle: 'Version 13.5',
+                  icon:Icons.access_time_filled_sharp ,
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(color: Colors.purple,shape: BoxShape.circle),
+                padding: EdgeInsets.all(6.0),
+                child: MyCard(
+                  title:'ASP Framework',
+                  subTitle: 'Version 13.5',
+                  icon:Icons.api ,
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(color: Colors.red),
+                padding: EdgeInsets.all(6.0),
+                child: MyCard(
+                  title:'Gin Framework',
+                  subTitle: 'Version 13.5',
+                  icon:Icons.remove_done ,
+                ),
+              ),
             ],
           ),
         ),
